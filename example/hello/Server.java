@@ -19,13 +19,13 @@ public class Server implements Hello {
         return a + b;
     }
 
-    // Novo método: converte string para maiúsculas
+    
     @Override
     public String toUpperCase(String input) {
         return input.toUpperCase();
     }
 
-    // Novo método: calcula a média de um array de números
+    
     @Override
     public double media(double[] numeros) {
         double soma = 0;
@@ -41,7 +41,7 @@ public class Server implements Hello {
             Server obj = new Server();
             Hello stub = (Hello) UnicastRemoteObject.exportObject(obj, 0);
 
-            // Bind the remote object's stub in the registry
+           
             Registry registry = LocateRegistry.getRegistry();
             registry.rebind("Hello", stub);
 
